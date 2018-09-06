@@ -1,10 +1,18 @@
 import express from "express";
 import apiRoutes from "./source/routes/crmRoutes";
+import mongoose from "mongoose";
+import bodyParser from "body-parser";
 
 const app =  express();
 const PORT = 3000;
 
+//MONGOOSE connection
+mongoose.Promise = global.Promise;
+mongoose.connect("mongodb://localhost/crm",{useNewUrlParser:true}).then(() => console.log("connected to mongoose successfully"));
 
+// Bodyparser setup
+app.use(bodyParser.urlencoded({extended:true}));
+app.use(bodyParser.json());
 
 app.use("/api",apiRoutes);
 

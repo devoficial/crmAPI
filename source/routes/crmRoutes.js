@@ -4,7 +4,12 @@ const router = express.Router();
 
 
 router.route("/contact")
-	.get((req,res) => {
+	.get((req,res,next) => {
+		// middleware
+		console.log(`Resquest from: ${req.originalUrl}`);
+		console.log(`Request method: ${req.method}`);
+		next();
+	},(req,res,next) => {
 		res.send("Get request is successfull");
 	})
 	.post((req,res) => {
