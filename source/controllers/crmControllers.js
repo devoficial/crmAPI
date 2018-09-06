@@ -47,7 +47,7 @@ export const updateContact = (req,res) => {
 };
 
 export const deleteContact = (req,res) => {
-	Contact.findOneAndRemove({_id:req.params.contactId})
+	Contact.findOneAndDelete({_id:req.params.contactId})
 		.then(() => {
 			res.json({
 				"message":"The contact has been deleted"
