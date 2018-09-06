@@ -14,6 +14,10 @@ mongoose.connect("mongodb://localhost/crm",{useNewUrlParser:true}).then(() => co
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 
+// serving static files
+app.use(express.static("public"));
+
+// connected to routes
 app.use("/api",apiRoutes);
 
 // connecting to the server
