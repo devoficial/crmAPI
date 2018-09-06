@@ -1,29 +1,27 @@
 import express  from  "express";
-
+import {
+	addNewContact,
+	getAllContacts,
+	getContactWithId,
+	updateContact,
+	deleteContact,
+}  from "../controllers/crmControllers";
 const router = express.Router();
 
-
 router.route("/contact")
-	.get((req,res,next) => {
-		// middleware
-		console.log(`Resquest from: ${req.originalUrl}`);
-		console.log(`Request method: ${req.method}`);
-		next();
-	},(req,res,next) => {
-		res.send("Get request is successfull");
-	})
-	.post((req,res) => {
-		res.send("Post request is successfull");
-	});
+// Gettin all cotacts from the db
+	.get(getAllContacts)
+// Adding a new contact to the db
+	.post(addNewContact);
 
 
 router.route("/contact/:contactId")
-	.put((req,res) => {
-		res.send("Put request is successfull");
-	})
-	.delete((req,res) => {
-		res.send("Delete request is successfull");
-	});
+// Get specific contact
+	.get(getContactWithId)
+// put request
+	.put(updateContact)
+// delete request
+	.delete(deleteContact);
 
 
 export default router;
