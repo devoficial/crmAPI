@@ -6,7 +6,7 @@
   "scripts": {
     "debug": "DEBUG=express:* nodemon ./app.js --exec babel-node -e js",
     "start": "nodemon ./app.js --exec babel-node -e js",
-    "test": "cross-env DEBUG=CRM:* mocha",
+    "test": "cross-env DEBUG=CRM:* nyc mocha",
     "compile": "babel source app.js --out-dir .compiled --source-maps --watch"
   },
   "author": "Debasis nath",
@@ -14,6 +14,7 @@
   "dependencies": {
     "body-parser": "^1.18.3",
     "express": "^4.16.3",
+    "loadash": "^1.0.0",
     "mongoose": "^5.2.13",
     "nodemon": "^1.18.4"
   },

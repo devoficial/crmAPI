@@ -6,3 +6,4 @@
 /.vscode
 /README.MD
 /.compiled
+/.nyc_output
