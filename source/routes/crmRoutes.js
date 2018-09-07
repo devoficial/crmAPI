@@ -1,6 +1,5 @@
 import express  from  "express";
-import {
-	addNewContact,
+import { addNewContact,
 	getAllContacts,
 	getContactWithId,
 	updateContact,

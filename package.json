@@ -5,7 +5,9 @@
   "main": "app.js",
   "scripts": {
     "debug": "DEBUG=express:* nodemon ./app.js --exec babel-node -e js",
-    "start": "nodemon ./app.js --exec babel-node -e js"
+    "start": "nodemon ./app.js --exec babel-node -e js",
+    "test": "cross-env DEBUG=CRM:* mocha",
+    "compile": "babel source app.js --out-dir .compiled --source-maps --watch"
   },
   "author": "Debasis nath",
   "license": "ISC",
@@ -18,6 +20,10 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
-    "babel-preset-stage-0": "^6.24.1"
+    "babel-preset-stage-0": "^6.24.1",
+    "chai": "^4.1.2",
+    "cross-env": "^5.2.0",
+    "mocha": "^5.2.0",
+    "nyc": "^13.0.1"
   }
 }

@@ -3,3 +3,6 @@
 /.editorconfig
 /.eslintignore
 /.package-lock.json
+/.vscode
+/README.MD
+/.compiled
