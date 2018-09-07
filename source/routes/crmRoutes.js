@@ -1,27 +1,31 @@
 import express  from  "express";
-import {
-	addNewContact,
+import { addNewContact,
 	getAllContacts,
 	getContactWithId,
 	updateContact,
 	deleteContact,
 }  from "../controllers/crmControllers";
+import { loginRequired } from "../controllers/userControllers";
+
 const router = express.Router();
+
+
 
 router.route("/contact")
 // Gettin all cotacts from the db
-	.get(getAllContacts)
+	.get(loginRequired,getAllContacts)
 // Adding a new contact to the db
-	.post(addNewContact);
+	.post(loginRequired,addNewContact);
 
 
 router.route("/contact/:contactId")
 // Get specific contact
-	.get(getContactWithId)
+	.get(loginRequired,getContactWithId)
 // put request
-	.put(updateContact)
+	.put(loginRequired,updateContact)
 // delete request
-	.delete(deleteContact);
+	.delete(loginRequired,deleteContact);
+
 
 
 export default router;

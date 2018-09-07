@@ -3,3 +3,7 @@
 /.editorconfig
 /.eslintignore
 /.package-lock.json
+/.vscode
+/README.MD
+/.compiled
+/.nyc_output
