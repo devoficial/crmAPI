@@ -5,7 +5,7 @@ import { addNewContact,
 	updateContact,
 	deleteContact,
 }  from "../controllers/crmControllers";
-import { loginRequired } from "../controllers/userControllers";
+// import { loginRequired } from "../controllers/userControllers";
 
 const router = express.Router();
 
@@ -13,18 +13,18 @@ const router = express.Router();
 
 router.route("/contact")
 // Gettin all cotacts from the db
-	.get(loginRequired,getAllContacts)
+	.get(getAllContacts)
 // Adding a new contact to the db
-	.post(loginRequired,addNewContact);
+	.post(addNewContact);
 
 
 router.route("/contact/:contactId")
 // Get specific contact
-	.get(loginRequired,getContactWithId)
+	.get(getContactWithId)
 // put request
-	.put(loginRequired,updateContact)
+	.put(updateContact)
 // delete request
-	.delete(loginRequired,deleteContact);
+	.delete(deleteContact);
 
 
 

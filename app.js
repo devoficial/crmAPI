@@ -41,3 +41,5 @@ app.use("/auth",authRoutes);
 
 // connecting to the server
 app.listen(PORT, () => console.log(`the app is listening on port ${PORT}`));
+
+export default app; // for testing

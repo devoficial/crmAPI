@@ -3,8 +3,8 @@ import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import { UserSchema } from "../models/userModel";
 
-
-const User = mongoose.model("User",UserSchema);
+// for testing
+export const User = mongoose.model("User",UserSchema);
 
 export const register = (req, res) => {
 	const newUser = new User(req.body);
