@@ -6,7 +6,7 @@
   "scripts": {
     "debug": "DEBUG=express:* nodemon ./app.js --exec babel-node -e js",
     "start": "nodemon ./app.js --exec babel-node -e js",
-    "test": "nyc mocha --require babel-core/register test",
+    "test": "nyc mocha  --require babel-core/register test",
     "compile": "babel test source app.js --out-dir .compiled --source-maps --watch"
   },
   "author": "Debasis nath",
@@ -26,6 +26,7 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-stage-0": "^6.24.1",
     "chai": "^4.1.2",
+    "chai-http": "^4.2.0",
     "cross-env": "^5.2.0",
     "mocha": "^5.2.0",
     "nyc": "^13.0.1"
