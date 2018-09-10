@@ -35,11 +35,11 @@ describe("Contact",function(){
 	/*
   * Test the /POST route
   */
-	context("/POST contact", function() {
-		it("It should not POST a contact without phone field",function(done){
+	context("/POST contact", () => {
+		it("It should not POST a contact without phone field",(done) => {
 			let contact = {
-				firstName:"dev",
-				lastName:"nath"
+				firstName:"someone",
+				lastName:"alien"
 			};
 			chai.request(server)
 				.post("/api/contact")
