@@ -20,6 +20,10 @@
     "mongoose": "^5.2.13",
     "nodemon": "^1.18.4"
   },
+  "repository":{
+    "type":"git",
+    "url":"git@github.com:devoficial/crmAPI.git"
+  },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
