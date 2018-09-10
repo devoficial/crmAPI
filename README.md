@@ -44,3 +44,5 @@ npm run debug
 
 ## FRONTEND
 - By using this api you can build any frontend crm app with backend support
+
+[ ![Codeship Status for devoficial/crmAPI](https://app.codeship.com/projects/984e6b20-96ed-0136-6e76-4697f7ee8c10/status?branch=master)](https://app.codeship.com/projects/304946)
