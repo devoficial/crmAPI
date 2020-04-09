@@ -18,7 +18,7 @@
     "jsonwebtoken": "^8.3.0",
     "loadash": "^1.0.0",
     "mongoose": "^5.2.13",
-    "nodemon": "^1.18.4"
+    "nodemon": "^2.0.3"
   },
   "repository":{
     "type":"git",
